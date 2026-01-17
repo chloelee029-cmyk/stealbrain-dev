@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/stealabrainrot01favicon.png" />
+  <title>Privacy Policy - Steal a Brainrot 01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+   <!-- Header -->
+  <div id="site-header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-4">Privacy Policy</h2>
+    <p class="mb-4">At <strong>Steal a Brainrot</strong>, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website and play our online games.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">1. Information We Collect</h3>
+    <ul class="list-disc list-inside mb-4">
+      <li><strong>Personal Information:</strong> We do not require you to provide personal information to play our games.</li>
+      <li><strong>Non-Personal Information:</strong> We may collect non-identifying information like device type, browser, IP address, and gameplay statistics to improve our site experience.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">2. Cookies & Tracking</h3>
+    <p class="mb-4">We use cookies and similar technologies to enhance your gaming experience, remember preferences, and analyze site traffic. You can disable cookies in your browser, but some features may not work properly.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">3. How We Use Your Information</h3>
+    <ul class="list-disc list-inside mb-4">
+      <li>Improve our games and website performance.</li>
+      <li>Provide support and respond to inquiries.</li>
+      <li>Analyze trends to offer a better gaming experience.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">4. Sharing Your Information</h3>
+    <p class="mb-4">We do <strong>not</strong> sell, trade, or rent your personal information to others. Third-party services (like analytics or ads) may collect data separately—please check their privacy policies.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">5. Security</h3>
+    <p class="mb-4">We implement reasonable technical measures to protect your information, but no method of transmission or storage is 100% secure.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">6. Children’s Privacy</h3>
+    <p class="mb-4">Our games are intended for users 13 and older. We do not knowingly collect personal information from children under 13.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">7. Changes to This Policy</h3>
+    <p class="mb-4">We may update this policy occasionally. Changes will be posted here with a revised date.</p>
+
+    <p class="mt-6">Contact us at <a href="mailto:contact@stealabrainrot01.com" class="text-purple-700 underline">contact@stealabrainrot01.com</a> if you have any questions.</p>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Components Loader -->
+  <script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-header").innerHTML = html;
+      });
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>

@@ -20,14 +20,8 @@
 </head>
 
 <body class="text-white min-h-screen">
-
-<!-- Header -->
-<header class="bg-black/40 backdrop-blur-lg border-b border-white/10">
-  <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-    <h2 class="text-xl font-semibold text-white">Steal a Brain Rot</h2>
-    <a href="#play" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition">Play Now</a>
-  </div>
-</header>
+ <!-- Header -->
+  <div id="site-header"></div>
 
 <!-- Hero Section -->
 <section class="max-w-6xl mx-auto px-6 py-16 text-center">
@@ -36,7 +30,7 @@
   </h1>
 
   <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-10">
-    Steal a Brain Rot is a fast-paced Roblox-inspired online game where players steal brainrot creatures, survive waves of enemies, and upgrade their abilities in real time. Play instantly in your browser — no download required.
+   Steal a Brainrot is a fast-paced, Roblox-style online heist game where you collect absurd meme Brainrots, steal from other players, defend your base, and build passive income — all playable instantly in your browser.
   </p>
 
   <a href="#play" class="inline-block bg-blue-500 hover:bg-blue-600 px-10 py-4 rounded-2xl text-lg font-semibold transition shadow-xl shadow-blue-500/30">
@@ -96,15 +90,23 @@
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="border-t border-white/10 bg-black/40">
-  <div class="max-w-6xl mx-auto px-6 py-8 text-center text-gray-400 text-sm">
-    <p>
-      Steal a Brain Rot is an independent online game experience inspired by Roblox-style gameplay. This website is not affiliated with Roblox Corporation.
-    </p>
-    <p class="mt-2">© 2026 stealabrainrot01.com</p>
-  </div>
-</footer>
+ <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Components Loader -->
+  <script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-header").innerHTML = html;
+      });
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+      });
+  </script>
 
 </body>
 </html>

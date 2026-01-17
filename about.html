@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/stealabrainrot01favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/stealabrainrot01favicon.png">
+
+  <title>About - Steal a Brainrot</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-6">About Steal a Brainrot 01</h1>
+
+    <p class="mb-4">
+      Welcome to <strong>Steal a Brainrot 01</strong>, your ultimate online playground
+      for quirky, fun, and addictive games!
+    </p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Our Mission</h2>
+    <p class="mb-4">
+      To bring joy, laughter, and a little chaos to your screen.
+      Whether you’re here to pass time, challenge friends, or just explore,
+      we’ve got something to keep your brain rolling.
+    </p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">What We Offer</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Free-to-play online games for entertainment purposes</li>
+      <li>Unique and humorous gameplay experiences</li>
+      <li>Accessible on desktop and mobile devices</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Our Vision</h2>
+    <p class="mb-4">
+      To build a casual gaming hub where everyone can relax, explore,
+      and enjoy creative games without stress.
+    </p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Contact</h2>
+    <p>
+      For questions or feedback, feel free to reach us at
+      <a href="mailto:contact@stealabrainrot01.com" class="text-blue-600 underline">
+        contact@stealabrainrot01.com
+      </a>
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Components Loader -->
+  <script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-header").innerHTML = html;
+      });
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>

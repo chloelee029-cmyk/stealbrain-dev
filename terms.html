@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="assets/stealabrainrot01favicon.png" />
+  <title>Terms of Service - Steal a Brainrot 01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-4">Terms of Service</h2>
+    <p class="mb-4">Welcome to <strong>Steal a Brainrot 01</strong>! By accessing or playing our online games, you agree to the following terms:</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">1. Use of the Site</h3>
+    <ul class="list-disc list-inside mb-4">
+      <li>You may use our website for personal entertainment only.</li>
+      <li>You agree not to misuse the site or disrupt others’ gameplay.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">2. Accounts & Access</h3>
+    <p class="mb-4">Some features may require an account. You are responsible for keeping your login secure. We reserve the right to suspend or terminate accounts violating these terms.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">3. Intellectual Property</h3>
+    <p class="mb-4">All content, games, graphics, and designs on this site are owned by <strong>Steal a Brainrot</strong>. You may not copy, distribute, or use our content for commercial purposes without permission.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">4. Limitations of Liability</h3>
+    <p class="mb-4">Our games are provided “as is.” We are not liable for any damages, including loss of data or device issues. We do not guarantee uninterrupted access or bug-free gameplay, though we try our best.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">5. Changes to Terms</h3>
+    <p class="mb-4">We may update these terms at any time. Continued use of the site implies acceptance of the new terms.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">6. Governing Law</h3>
+    <p class="mb-4">These terms are governed by applicable laws where <strong>Steal a Brainrot</strong> operates.</p>
+
+    <p class="mt-6">Questions or concerns? Contact us at <a href="mailto:your-email@example.com" class="text-purple-700 underline">your-email@example.com</a>.</p>
+  </main>
+
+ <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Components Loader -->
+  <script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-header").innerHTML = html;
+      });
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>
